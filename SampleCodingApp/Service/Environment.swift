@@ -1,5 +1,5 @@
 //
-//  EndPoints.swift
+//  Environment.swift
 //  SampleCodingApp
 //
 //  Created by Stephen on  23/03/21.

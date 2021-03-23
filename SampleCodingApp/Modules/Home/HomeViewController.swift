@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  SampleCodingApp
 //
 //  Created by Stephen on 23/03/21.
@@ -12,22 +12,30 @@ protocol HomeViewControllerProtocol: class {
     func showError()
 }
 
-class HomeViewController: UIViewController, Storyboarded {
+final class HomeViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var homeViewModel:HomeViewModelProtocal!
-    weak var coordinator: Coordinator?
+    var homeViewModel:HomeViewModelProtocal!  // ViewModel
+    weak var coordinator: Coordinator?        // Coordinator
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         homeViewModel.getItems()
+        setupUI()
+    }
+    
+    // MARK: Private Methods
+
+    private func setupUI() {
         tableView.sectionHeaderHeight = 0.0;
         tableView.sectionFooterHeight = 0.0;
     }
 }
+
+// MARK: UITableViewDataSource Methods
 
 extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,6 +55,8 @@ extension HomeViewController: UITableViewDataSource {
     }
 }
 
+// MARK: UITableViewDelegate Methods
+
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = homeViewModel.getItem(for: indexPath.section)
@@ -56,6 +66,8 @@ extension HomeViewController: UITableViewDelegate {
         return section == 0 ? 1 : 20 
     }
 }
+
+// MARK: HomeViewControllerProtocol Methods
 
 extension HomeViewController: HomeViewControllerProtocol {
     func updateUI() {

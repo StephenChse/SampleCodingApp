@@ -1,6 +1,6 @@
 //
-//  Post.swift
-//  CodingChallenge
+//  ItemResult.swift
+//  SampleCodingApp
 //
 //  Created by Stephen on  23/03/21..
 //

@@ -10,7 +10,7 @@ import Foundation
 protocol HomeDetailViewModelProtocal {
     var comment:String { get set }
 }
-class HomeDetailViewModel: HomeDetailViewModelProtocal {
+final class HomeDetailViewModel: HomeDetailViewModelProtocal {
     var comment: String = ""
     
     init(comment:String?) {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeDetailsViewController: UIViewController, Storyboarded {
+final class HomeDetailsViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var commentTextView: UITextView!
     
@@ -19,7 +19,7 @@ class HomeDetailsViewController: UIViewController, Storyboarded {
         updateData()
     }
     
-    func updateData() {
+    private func updateData() {
         commentTextView.text = viewModel?.comment
     }
 

@@ -16,6 +16,11 @@
 		0412C40F2609F7AF001F6840 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C40E2609F7AF001F6840 /* Environment.swift */; };
 		0412C4172609FE79001F6840 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C4162609FE79001F6840 /* ControllerExtension.swift */; };
 		0412C41C260A005D001F6840 /* HomeDetailVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C41B260A005D001F6840 /* HomeDetailVeiwModel.swift */; };
+		0412C42C260A04C4001F6840 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C42B260A04C4001F6840 /* HomeViewModelTests.swift */; };
+		0412C431260A04D8001F6840 /* HomeDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C430260A04D8001F6840 /* HomeDetailViewModelTests.swift */; };
+		0412C436260A051B001F6840 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C435260A051B001F6840 /* MockService.swift */; };
+		0412C43E260A0598001F6840 /* ItemsSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0412C43D260A0598001F6840 /* ItemsSuccessResponse.json */; };
+		0412C443260A05B9001F6840 /* ItemFailureResonse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0412C442260A05B9001F6840 /* ItemFailureResonse.json */; };
 		0452D4AC2609DDF4008DEE4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452D4AB2609DDF4008DEE4C /* AppDelegate.swift */; };
 		0452D4AE2609DDF4008DEE4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452D4AD2609DDF4008DEE4C /* SceneDelegate.swift */; };
 		0452D4B02609DDF4008DEE4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452D4AF2609DDF4008DEE4C /* HomeViewController.swift */; };
@@ -56,6 +61,11 @@
 		0412C40E2609F7AF001F6840 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0412C4162609FE79001F6840 /* ControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
 		0412C41B260A005D001F6840 /* HomeDetailVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailVeiwModel.swift; sourceTree = "<group>"; };
+		0412C42B260A04C4001F6840 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		0412C430260A04D8001F6840 /* HomeDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModelTests.swift; sourceTree = "<group>"; };
+		0412C435260A051B001F6840 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		0412C43D260A0598001F6840 /* ItemsSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ItemsSuccessResponse.json; sourceTree = "<group>"; };
+		0412C442260A05B9001F6840 /* ItemFailureResonse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ItemFailureResonse.json; sourceTree = "<group>"; };
 		0452D4A82609DDF4008DEE4C /* SampleCodingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCodingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0452D4AB2609DDF4008DEE4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0452D4AD2609DDF4008DEE4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +120,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0412C44A260A0609001F6840 /* SampleResponse */ = {
+			isa = PBXGroup;
+			children = (
+				0412C442260A05B9001F6840 /* ItemFailureResonse.json */,
+				0412C43D260A0598001F6840 /* ItemsSuccessResponse.json */,
+			);
+			path = SampleResponse;
+			sourceTree = "<group>";
+		};
 		0452D49F2609DDF4008DEE4C = {
 			isa = PBXGroup;
 			children = (
@@ -151,8 +170,12 @@
 		0452D4C12609DDF7008DEE4C /* SampleCodingAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				0412C44A260A0609001F6840 /* SampleResponse */,
+				0412C435260A051B001F6840 /* MockService.swift */,
 				0452D4C22609DDF7008DEE4C /* SampleCodingAppTests.swift */,
 				0452D4C42609DDF7008DEE4C /* Info.plist */,
+				0412C42B260A04C4001F6840 /* HomeViewModelTests.swift */,
+				0412C430260A04D8001F6840 /* HomeDetailViewModelTests.swift */,
 			);
 			path = SampleCodingAppTests;
 			sourceTree = "<group>";
@@ -333,6 +356,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0412C443260A05B9001F6840 /* ItemFailureResonse.json in Resources */,
+				0412C43E260A0598001F6840 /* ItemsSuccessResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +398,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0452D4C32609DDF7008DEE4C /* SampleCodingAppTests.swift in Sources */,
+				0412C431260A04D8001F6840 /* HomeDetailViewModelTests.swift in Sources */,
+				0412C42C260A04C4001F6840 /* HomeViewModelTests.swift in Sources */,
+				0412C436260A051B001F6840 /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

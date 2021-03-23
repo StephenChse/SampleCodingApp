@@ -13,7 +13,7 @@ protocol HomeViewModelProtocal {
    func getItem(for index:Int)-> (name:String, email:String, comment:String)
 }
 
-class HomeViewModel {
+final class HomeViewModel {
     
     weak private var delegate:HomeViewControllerProtocol!
     let service:Servicable!
@@ -43,12 +43,11 @@ extension HomeViewModel: HomeViewModelProtocal {
         }
     }
     /*
-     this method called from outside to connect to server to get posts result
-     Only integrated page = 1 currently
+     this method connect calls rest API to get data
      */
     func getItems() {
         let restClient = RestClient(baseUrl:Environment.baseUrl.rawValue, path:Path.posts.rawValue, params:"")
-        service.fetchData(restClient:restClient, type:Item.self) { [weak self] (result )  in
+        service.fetchData(restClient:restClient, type:Item.self) { [weak self] (result)  in
             switch result {
             case .success(let items):
                 self?.items = items
@@ -62,10 +61,11 @@ extension HomeViewModel: HomeViewModelProtocal {
     }
     
     /*
-        this method will take index as input and return post name, email  and comment  as tupple if post exists for that index otherwise will return empty values.
+         params : index of type Int
+         returns: tupple of name, email, comment
      */
     func getItem(for index:Int)-> (name:String, email:String, comment:String) {
-        guard let _items = items, _items.count > index else {
+        guard let _items = items, index >= 0, _items.count > index else {
             return ("", "", "")
         }
         let item = _items[index]
