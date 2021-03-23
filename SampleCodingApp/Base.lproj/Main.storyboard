@@ -82,6 +82,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Mua-re-VB7"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hre-u4-fNJ">
+                                <rect key="frame" x="177" y="423" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Aun-QI-zla"/>
+                                    <constraint firstAttribute="width" constant="60" id="Mcn-V8-j9q"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -90,10 +97,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aex-Zf-Mbc" secondAttribute="trailing" id="NWJ-LE-mpQ"/>
                             <constraint firstItem="aex-Zf-Mbc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NZn-zr-cXo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aex-Zf-Mbc" secondAttribute="bottom" id="QV4-Zs-BuR"/>
+                            <constraint firstItem="hre-u4-fNJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bet-6m-Kta"/>
+                            <constraint firstItem="hre-u4-fNJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="tUc-cW-Hq1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="LeC-Eg-vVM"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="hre-u4-fNJ" id="wig-0b-bMK"/>
                         <outlet property="tableView" destination="aex-Zf-Mbc" id="m9H-1O-KVl"/>
                     </connections>
                 </viewController>

@@ -10,7 +10,7 @@ import Foundation
 
 class MockService: Servicable, JsonDecodable {
     var responseFileName = ""
-    func fetchData<T:Codable>(restClient:RestClient,type:T.Type, completionHandler:@escaping CompletonHandler<T>) {
+    func fetchData<T:Codable>(restClient:RestClient,type:T.Type, completionHandler:@escaping Completion<T>) {
         // Obtain Reference to Bundle
         let bundle = Bundle(for:MockService.self)
         
@@ -18,7 +18,7 @@ class MockService: Servicable, JsonDecodable {
               let data = try? Data(contentsOf: url),
               let output = decode(input:data, type:T.self)
         else {
-            completionHandler(.failure(NetworkError.dataParsinFailed(message:"Failed to get response")))
+            completionHandler(.failure(ApiError.parsinFailed(message:"Failed to get response")))
             return
         }
         completionHandler(.success(output))

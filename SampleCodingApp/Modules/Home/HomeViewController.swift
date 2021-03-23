@@ -15,7 +15,8 @@ protocol HomeViewControllerProtocol: class {
 final class HomeViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var homeViewModel:HomeViewModelProtocal!  // ViewModel
     weak var coordinator: Coordinator?        // Coordinator
     
@@ -32,6 +33,17 @@ final class HomeViewController: UIViewController, Storyboarded {
     private func setupUI() {
         tableView.sectionHeaderHeight = 0.0;
         tableView.sectionFooterHeight = 0.0;
+        showActivityIndicator()
+    }
+    
+    private func showActivityIndicator() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideActivityIndicator() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
     }
 }
 
@@ -72,8 +84,10 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: HomeViewControllerProtocol {
     func updateUI() {
         tableView.reloadData()
+        hideActivityIndicator()
     }
     func showError() {
         self.showAlert()
+        hideActivityIndicator()
     }
 }
