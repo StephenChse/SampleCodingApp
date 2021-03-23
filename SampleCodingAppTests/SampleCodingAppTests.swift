@@ -2,7 +2,7 @@
 //  SampleCodingAppTests.swift
 //  SampleCodingAppTests
 //
-//  Created by MAC on 23/03/21.
+//  Created by Stephen on 23/03/21.
 //
 
 import XCTest
