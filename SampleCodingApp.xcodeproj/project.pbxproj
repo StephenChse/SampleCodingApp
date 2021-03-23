@@ -15,6 +15,7 @@
 		0412C40A2609F697001F6840 /* ItemResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C4092609F697001F6840 /* ItemResult.swift */; };
 		0412C40F2609F7AF001F6840 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C40E2609F7AF001F6840 /* Environment.swift */; };
 		0412C4172609FE79001F6840 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C4162609FE79001F6840 /* ControllerExtension.swift */; };
+		0412C41C260A005D001F6840 /* HomeDetailVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C41B260A005D001F6840 /* HomeDetailVeiwModel.swift */; };
 		0452D4AC2609DDF4008DEE4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452D4AB2609DDF4008DEE4C /* AppDelegate.swift */; };
 		0452D4AE2609DDF4008DEE4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452D4AD2609DDF4008DEE4C /* SceneDelegate.swift */; };
 		0452D4B02609DDF4008DEE4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452D4AF2609DDF4008DEE4C /* HomeViewController.swift */; };
@@ -54,6 +55,7 @@
 		0412C4092609F697001F6840 /* ItemResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemResult.swift; sourceTree = "<group>"; };
 		0412C40E2609F7AF001F6840 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0412C4162609FE79001F6840 /* ControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
+		0412C41B260A005D001F6840 /* HomeDetailVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailVeiwModel.swift; sourceTree = "<group>"; };
 		0452D4A82609DDF4008DEE4C /* SampleCodingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCodingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0452D4AB2609DDF4008DEE4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0452D4AD2609DDF4008DEE4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,8 +137,7 @@
 				0452D4E22609E5B5008DEE4C /* Service */,
 				0452D4E12609E597008DEE4C /* Model */,
 				0452D4E02609E58D008DEE4C /* Coordinator */,
-				0452D4DF2609E581008DEE4C /* ViewModel */,
-				0452D4DE2609E579008DEE4C /* View */,
+				0452D4DE2609E579008DEE4C /* Modules */,
 				0452D4AB2609DDF4008DEE4C /* AppDelegate.swift */,
 				0452D4AD2609DDF4008DEE4C /* SceneDelegate.swift */,
 				0452D4B12609DDF4008DEE4C /* Main.storyboard */,
@@ -165,21 +166,13 @@
 			path = SampleCodingAppUITests;
 			sourceTree = "<group>";
 		};
-		0452D4DE2609E579008DEE4C /* View */ = {
+		0452D4DE2609E579008DEE4C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				0452D4F92609E8A7008DEE4C /* HomeDetails */,
 				0452D4F82609E89F008DEE4C /* Home */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0452D4DF2609E581008DEE4C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0452D4E62609E6D8008DEE4C /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		0452D4E02609E58D008DEE4C /* Coordinator */ = {
@@ -212,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				0452D4F32609E864008DEE4C /* HomeTableViewCell.swift */,
+				0452D4E62609E6D8008DEE4C /* HomeViewModel.swift */,
 				0452D4AF2609DDF4008DEE4C /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -221,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				0452D4EE2609E7F0008DEE4C /* HomeDetailsViewController.swift */,
+				0412C41B260A005D001F6840 /* HomeDetailVeiwModel.swift */,
 			);
 			path = HomeDetails;
 			sourceTree = "<group>";
@@ -369,6 +364,7 @@
 				0452D4E72609E6D8008DEE4C /* HomeViewModel.swift in Sources */,
 				0412C3F32609F56E001F6840 /* Storyboarded.swift in Sources */,
 				0412C4172609FE79001F6840 /* ControllerExtension.swift in Sources */,
+				0412C41C260A005D001F6840 /* HomeDetailVeiwModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

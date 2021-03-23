@@ -29,9 +29,9 @@ class MainCoordinator: Coordinator {
     }
     
     func homeDetails(comment:String) {
-//        let vc = HomeDetailsViewController.instantiate()
-//        vc.coordinator = self
-//        vc.viewModel = HomeDetailViewModel(comment:comment)
-//        navigationController.pushViewController(vc, animated: true)
+        let vc = HomeDetailsViewController.instantiate()
+        vc.coordinator = self
+        vc.viewModel = HomeDetailViewModel(comment:comment)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

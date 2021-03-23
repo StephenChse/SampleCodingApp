@@ -12,7 +12,7 @@ protocol HomeViewControllerProtocol: class {
     func showError()
 }
 
-class HomeViewController: UIViewController,Storyboarded {
+class HomeViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -49,11 +49,11 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = homeViewModel.getItem(for: indexPath.section)
-        coordinator?.homeDetails(comment: post.comment)
+        let item = homeViewModel.getItem(for: indexPath.section)
+        coordinator?.homeDetails(comment: item.comment)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 1 : 20 // 20 is my other sections height
+        return section == 0 ? 1 : 20 
     }
 }
 
