@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeDetailsViewController: UIViewController {
+class HomeDetailsViewController: UIViewController,Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
