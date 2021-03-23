@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomeViewModelProtocal {
    var numberOfItems:Int {get}
-   func fetchPosts()
+   func getItems()
    func getItem(for index:Int)-> (name:String, email:String, comment:String)
 }
 
@@ -46,7 +46,7 @@ extension HomeViewModel: HomeViewModelProtocal {
      this method called from outside to connect to server to get posts result
      Only integrated page = 1 currently
      */
-    func fetchPosts() {
+    func getItems() {
         let restClient = RestClient(baseUrl:Environment.baseUrl.rawValue, path:Path.posts.rawValue, params:"")
         service.fetchData(restClient:restClient, type:Item.self) { [weak self] (result )  in
             switch result {
@@ -54,7 +54,9 @@ extension HomeViewModel: HomeViewModelProtocal {
                 self?.items = items
             case .failure(_):
                 self?.items = nil
-                self?.delegate?.showError()
+                DispatchQueue.main.async {
+                    self?.delegate?.showError()
+                }
             }
         }
     }

@@ -71,9 +71,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lblComment" destination="EbZ-oP-OPl" id="PC4-f7-rf8"/>
-                                            <outlet property="lblEmail" destination="cwe-Rk-QFx" id="pEd-23-6BH"/>
-                                            <outlet property="lblName" destination="VLX-Xq-pS9" id="uWS-MF-dPh"/>
+                                            <outlet property="comment" destination="EbZ-oP-OPl" id="hhA-YU-2GO"/>
+                                            <outlet property="email" destination="cwe-Rk-QFx" id="x2b-5j-OCo"/>
+                                            <outlet property="name" destination="VLX-Xq-pS9" id="ruA-bV-VrK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
